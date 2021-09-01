@@ -6,7 +6,8 @@ public class gitPractise {
     public static void main(String[] args) {
 
         List<Integer> numbers = new ArrayList<>();
-        loadList(numbers, 20);
+        List<Integer> randomNumbers = loadList(numbers, 20);
+        getMin(randomNumbers);
 
     }
     public static List<Integer> loadList(List<Integer> numbers, int size) {
@@ -23,6 +24,15 @@ public class gitPractise {
         Random rnd = new Random();
         int random = rnd.nextInt(max + 1 - min) + min;
         return random;
+    }
+    public static int getMin(List<Integer> numbers) {
+        int min = numbers.get(0);
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) < min) {
+                min = numbers.get(i);
+            }
+        }
+        return min;
     }
 
 }
