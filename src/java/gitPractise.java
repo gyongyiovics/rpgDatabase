@@ -8,6 +8,7 @@ public class gitPractise {
         List<Integer> numbers = new ArrayList<>();
         List<Integer> randomNumbers = loadList(numbers, 20);
         getMin(randomNumbers);
+        getEvenNumbers(randomNumbers);
 
     }
     public static List<Integer> loadList(List<Integer> numbers, int size) {
@@ -33,6 +34,15 @@ public class gitPractise {
             }
         }
         return min;
+    }
+    public static int getEvenNumbers(List<Integer> numbers) {
+        int counter=0;
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) % 2 == 0) {
+                counter++;
+            }
+        }
+        return counter;
     }
 
 }
