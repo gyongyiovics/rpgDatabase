@@ -1,0 +1,3 @@
+﻿anglisztika;ANG17-183;Tipográfia;K;2;2;NULL
+germanisztika;NEM17-211;Az interkulturális kompetencia fejlesztése;G;3;3;NEM17-001*
+germanisztika;NEM17-223;Frazémák és kötött kifejezések;G;3;3;NEM17-001*

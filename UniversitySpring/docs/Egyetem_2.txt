@@ -1,0 +1,37 @@
+1@M
+
+feladat: fejtsd meg a feladat címét :) - ha eddig még nem tetted meg! egyetem
+
+
+Ismétlés az első Próbavizsga feladatsorából...
+
+A szakok.txt fájl tartalmazza az adatokat, amikkel dolgoznod kell.
+
+A fájl részletes tartalma:
+szak megnevezése
+tanegység kódja
+tanegység megnevezése
+tanegység típusa, amelynek értéke lehet:
+K - kollokvium
+G - gyakorlat
+V - vizsga
+EF - egyéni felkészülés
+ajánlott félév(ek)
+| (AltGr + W) jellel elválasztva (ha több van)
+kredit
+előfeltétel(ek) kódja
+NULL szöveg, ha nincs előfeltétel
+| (AltGr + W) jellel elválasztva, ha több van
+csillag ( * ) jel áll a kód után, ha az gyenge előfeltétel
+
+
+Feladatok
+
+Olvasd be a fájlt szak szerint rendezve!
+Írj metódust, amely visszaadja (adatszerkezetben) azoknak a tanegységeket, amelyeknek van gyenge előfeltétele.
+Írj metódust, amely két bemeneti paramétert kap: a szakhoz tartozó tanegységek listáját és egy félévet (a félév számát), és visszaadja (adatszerkezetben) azokat a tanegységeket, amelyek arra a félévre vannak ajánlva.
+Írj metódust, amely visszaadja az első legtöbb előfeltétellel rendelkező tanegységet szakokra lebontva!
+Írj metódust, amely visszaadja, hogy szakonként mekkora a K (kollokvium) és a G (gyakorlat) tanegységek aránya!
+Írj metódust, amely visszaadja az összes olyan tanegységet, amelynek megnevezésében szerepel a “nyelv” szó! (Akár szóelemként is. Tehát a metódus keresi és megtalálja a tanegységet, amelynek megnevezésében akár a “nyelv”, akár a “nyelvismeret”, akár a “nyelvtudomány” stb. szerepel.)
+
+
