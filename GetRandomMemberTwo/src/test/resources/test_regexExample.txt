@@ -1,0 +1,6 @@
+User-Agent: Pushwize/2.8.0 Dutch+News/9.14.0 Dalvik/2.1.0 (Linux; U; Android 7.1.1; SM-J510FN Build/NMF26X)
+User-Agent: Pushwize/2.8.0 Dutch+News/9.14.0 Dalvik/2.1.0 (Linux; U; Android 7.1.1; Moto G Play Build/NPIS26.48-43-2)
+User-Agent: Pushwize/2.8.0 Dutch+News/9.14.0 Dalvik/2.1.0 (Linux; U; Android 9; SM-A505FN Build/PPR1.180610.011)
+User-Agent: Pushwize/1.11 Daily-News/5.14.2 iOS/12.4.4 (iPad4,2)
+User-Agent: Pushwize/2.9.1 Daily-News/6.0.5 Dalvik/2.1.0 (Linux; U; Android 9; Mi MIX 3 MIUI/V11.0.4.0.PEEMIXM)
+User-Agent: Pushwize/2.9.1 Daily-News/6.0.5 Dalvik/2.1.0 (Linux; U; Android 5.0.2; SM-T535 Build/LRX22G)

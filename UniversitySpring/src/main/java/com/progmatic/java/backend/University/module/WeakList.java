@@ -19,10 +19,14 @@ public class WeakList {
      *
      */
 
-    @Autowired
     MajorHandler majorHandler;
 
-    public List<Major> majorsWithWeak() {
+    @Autowired
+    public WeakList(MajorHandler majorHandler) {
+        this.majorHandler = majorHandler;
+    }
+
+    public boolean majorsWithWeak() {
         Map<String, List<Major>> majorMap = majorHandler.getLoadMajor();
         List<Major> majorsList = new ArrayList<>();
         for(List<Major> majors : majorMap.values()) {
@@ -30,10 +34,11 @@ public class WeakList {
                 //STRING
                 if(major.getRequirements().contains("*")) {
                     majorsList.add(major);
+                    return true;
                 }
             }
         }
-        return majorsList;
+        return false;
     }
 
 }

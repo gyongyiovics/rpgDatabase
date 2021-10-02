@@ -15,12 +15,13 @@ import java.util.stream.Stream;
 public class MajorLoader {
     @Getter
     Map<String, List<Major>> loadMajor = new HashMap<>();
-    @Autowired
+
     ConfigReader configReader;
 
-    /*public MajorLoader(@Autowired ConfigReader configReader) {
+    @Autowired
+    public MajorLoader(@Autowired ConfigReader configReader) {
         this.configReader = configReader;
-    }*/
+    }
 
     public Map<String, List<Major>> loadFromFile() throws IOException {
         /*
@@ -30,15 +31,16 @@ public class MajorLoader {
         //AtomicReference<Map<String, List<Major>>> result = null;
 
         Map<String, List<Major>> result = new HashMap<>();
-        Stream<String> lines = Files.lines(configReader.getResource());
-        lines.forEach(line -> {
-            //refactored this! -> Major instead of Map<String, List<Major>>
-            Major major = loadFromLine(line);
-            //System.out.println(major.getCourseName());
-            loadMajor.putIfAbsent(major.getName(), new ArrayList<>());
-            loadMajor.get(major.getName()).add(major);
-            //result.putAll(loadFromLine(line));
-        });
+        try (Stream<String> lines = Files.lines(configReader.getResource())) {
+            lines.forEach(line -> {
+                //refactored this! -> Major instead of Map<String, List<Major>>
+                Major major = loadFromLine(line);
+                //System.out.println(major.getCourseName());
+                loadMajor.putIfAbsent(major.getName(), new ArrayList<>());
+                loadMajor.get(major.getName()).add(major);
+                //result.putAll(loadFromLine(line));
+            });
+        }
         //check: ok
         //System.out.println(loadMajor.size());
         return loadMajor;

@@ -17,8 +17,14 @@ public class Linguists {
      * amelynek megnevezésében akár a “nyelv”, akár a “nyelvismeret”, akár a “nyelvtudomány” stb. szerepel.)
      */
 
-    @Autowired
+    //dangerous use! simpler: put it in a constructor
+    //@Autowired
     MajorHandler majorHandler;
+
+    @Autowired
+    public Linguists(MajorHandler majorHandler) {
+        this.majorHandler = majorHandler;
+    }
 
     public List<Major> majorsWithLinguistics() {
         /*Map<String, List<Major>> majorMap1 = majorHandler.getLoadMajor();
@@ -45,7 +51,7 @@ public class Linguists {
         return majorsList;
     }
 
-    public Major getMajor() {
+    private Major getMajor() {
         Map<String, List<Major>> majorMap1 = majorHandler.getLoadMajor();
         for(List<Major> majors : majorMap1.values()) {
             for(Major major : majors) {

@@ -20,7 +20,7 @@ public class MajorHandler {
     ConfigReader configReader;
 
     @Autowired
-    MajorHandler (MajorLoader majorLoader, ConfigReader configReader) {
+    public MajorHandler(MajorLoader majorLoader, ConfigReader configReader) {
         this.majorLoader = majorLoader;
         this.configReader = configReader;
         try {
